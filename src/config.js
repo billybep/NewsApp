@@ -1,4 +1,6 @@
+import { NEWS_API_KEY } from '@env';
+
 export default {
-    NEWS_API_KEY: "5072e5454f514128ba7b338b52e5e102",
+    NEWS_API_KEY,
     PAGE_SIZE: 10
 }
