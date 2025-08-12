@@ -1,13 +1,15 @@
-# React Native News App
+# NewsApp (Expo) - Docker-ready
 
-A simple news app built with React Native (Expo), featuring:
-- Fetching news from [NewsAPI](https://newsapi.org)
-- Offline mode using AsyncStorage
-- Pull-to-refresh
-- Infinite scrolling
+Features:
+- Fetch top headlines (NewsAPI)
+- Infinite scroll, pull-to-refresh
+- Offline cache via AsyncStorage
+- Article detail via WebView
 
-## How to Run
-1. Clone this repo
-2. Install dependencies:
+## Setup
+1. Clone repo
+2. Edit `src/config.js` — tambahkan `NEWS_API_KEY`
+3. Build & run with Docker:
    ```bash
-   npm install
+   docker-compose build
+   docker-compose up
