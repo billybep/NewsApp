@@ -8,11 +8,12 @@ RUN apt-get update && apt-get install -y \
   python3 \
   && apt-get clean
 
-# Install Expo CLI
-RUN npm install --global expo-cli
+  WORKDIR /app
 
-# Set working directory
-WORKDIR /app
+# Init project
+RUN npx create-expo-app . --template expo-template-blank-typescript
 
-# Default command
-CMD ["sh", "-c", "npm install && npx expo start --tunnel"]
+# Install deps
+RUN npm install
+
+CMD ["npx", "expo", "start", "--tunnel"]

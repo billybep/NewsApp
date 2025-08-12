@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   newsapp:
     build: .
@@ -6,7 +5,11 @@ services:
       - "19000:19000" # Metro bundler
       - "19001:19001"
       - "19002:19002"
+      - "8081:8081"  # Metro bundler fallback
     volumes:
       - .:/app
+    environment:
+      - EXPO_USE_METRO_WORKSPACE_ROOT=1
+      - REACT_NATIVE_PACKAGER_HOSTNAME=host.docker.internal
     stdin_open: true
     tty: true

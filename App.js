@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, FlatList, StyleSheet, ActivityIndicator, RefreshControl } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const API_KEY = "YOUR_NEWS_API_KEY"; // https://newsapi.org
+const API_KEY = "5072e5454f514128ba7b338b52e5e102"; // https://newsapi.org
 const API_URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
 
 export default function App() {
