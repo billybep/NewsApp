@@ -13,6 +13,9 @@ RUN apt-get update && apt-get install -y \
 # Create app directory
 WORKDIR /app
 
+# Install ngrok secara eksplisit sebelum yang lain
+RUN npm install -g @expo/ngrok@^4.1.0 --unsafe-perm
+
 # Copy onliy package files first for caching
 COPY package.json packaga-lock.json* yarn.lock* ./
 

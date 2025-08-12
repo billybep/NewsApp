@@ -10,5 +10,6 @@ services:
       - "19002:19002"
     environment:
       - EXPO_NO_DETACHED=true
+      - NODE_ENV=development
     stdin_open: true
     tty: true
